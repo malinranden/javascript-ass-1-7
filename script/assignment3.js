@@ -21,3 +21,27 @@ function isValidPassword(userName, password) {
 };
 console.log(isValidPassword(userName, password));
 
+
+// Comparison Operators
+
+// let password = prompt(`Enter password`);
+// // password = "bajskorv";
+
+//     if (password.length >= 8) {
+//         console.log(true);
+//     } else { 
+//         console.log(false);
+//     };
+
+
+// Ternary ??? how ?
+
+// let password = prompt(`Enter password`);
+// // // password = "bajskorv";
+
+// let output = password >= 8 ? true : false;
+// console.log(output);
+
+// function isValidPassword(userName, password) {
+//     return password.length < 8 ? false
+// }
