@@ -4,36 +4,20 @@ let password = prompt(`Enter password`);
 // console.log(password.length);
 
 
-function isValidPassword(password) {
-    if(password.length >= 8) {
-        return true;
-        console.log(true);
-    } else {
-        return false;
+function isValidPassword(userName, password) {
+    if(password.length < 8) {
         console.log(false);
-    }
-    if(password.includes(" ")) {
         return false;
-        console.log(false);
-    } else {
-        return true;
-        console.log(true);
-    }
-    if(userName.includes(password)) {
-        return false;
-        console.log(false);
-    } else {
-        return true;
-        console.log(true);
-    } 
+        } else if (password.includes(" ")) {
+            console.log(false);
+            return false;
+        } else if (password.includes(userName)) {
+            console.log(false);
+            return false;
+        } else {
+            console.log(true);
+            return true;
+        } 
 };
-console.log(isValidPassword(password));
+console.log(isValidPassword(userName, password));
 
-
-
-
-// switch (password) {
-//     case "blankSpace":
-//         console.log(password.includes(" "));
-//         break;
-// }
