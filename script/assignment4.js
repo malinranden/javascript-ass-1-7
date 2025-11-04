@@ -61,53 +61,53 @@
 // Use a for loop to iterate through the array and calculate the sum of the even numbers.
 // Return the sum of the even numbers.
 
-let myArray = [10]; // ev ej nödvändig..?
-function sumEvenNumbers(myArray) {
-    for (i = 0; i < myArray; i++) {
-        let evenNumbers = (myArray[i] === %2);
-        console.log(evenNumbers);
-        // if i === %2 = evenNumbers // det här är vad jag vill ska hända 
-    }
-}
-sumEvenNumbers([/*values*/]); // call the fuction as an array
-console.log(sunEvenNumers); // osäker, är  det sumEvenNumbers eller myArray?
-
-
-let input = 10;
-let evenNumbers = input %2;
-console.log(evenNumbers.sum%(2));
-// function sumEvenNumbers(input, evenNumbers) {
-    // let array = [];
-//     for (let i = 1; i <= input; i++) {
-//         // const[i] = 
-//         if (i = evenNumbers){
-//             console.log(evenNumbers);
-//             break;
-//         }
+// let myArray = [10]; // ev ej nödvändig..?
+// function sumEvenNumbers(myArray) {
+//     for (i = 0; i < myArray; i++) {
+//         let evenNumbers = (myArray[i] === %2);
+//         console.log(evenNumbers);
+//         // if i === %2 = evenNumbers // det här är vad jag vill ska hända 
 //     }
-// //     return input, evenNumbers;
 // }
-// console.log()
-// input.sum[%2 == 1];
+// sumEvenNumbers([/*values*/]); // call the fuction as an array
+// console.log(sunEvenNumers); // osäker, är  det sumEvenNumbers eller myArray?
 
-// x === %2; 
-// x = how many even numbers
 
-// prompt with parseFloat to make into numbers
-// fruit[1] = "coconut"; // changes item 1 to coconut
+// let input = 10;
+// let evenNumbers = input %2;
+// console.log(evenNumbers.sum%(2));
+// // function sumEvenNumbers(input, evenNumbers) {
+//     // let array = [];
+// //     for (let i = 1; i <= input; i++) {
+// //         // const[i] = 
+// //         if (i = evenNumbers){
+// //             console.log(evenNumbers);
+// //             break;
+// //         }
+// //     }
+// // //     return input, evenNumbers;
+// // }
+// // console.log()
+// // input.sum[%2 == 1];
 
-// let number = 1;
-// function isEven (number) {
-//     if (number %2 === 0) {
-//         return sum of number;
-//     } 
-// };
-// console.log(isEven(number));
+// // x === %2; 
+// // x = how many even numbers
 
-                    // for (let i = 1; i <= 15; i++) {
-                    //     if (i ===10){
-                    //         break;
-                    //     } else {
-                    //         console.log(i); // shows 1-9 and then stops 
-                    //     }
-                    // }
+// // prompt with parseFloat to make into numbers
+// // fruit[1] = "coconut"; // changes item 1 to coconut
+
+// // let number = 1;
+// // function isEven (number) {
+// //     if (number %2 === 0) {
+// //         return sum of number;
+// //     } 
+// // };
+// // console.log(isEven(number));
+
+//                     // for (let i = 1; i <= 15; i++) {
+//                     //     if (i ===10){
+//                     //         break;
+//                     //     } else {
+//                     //         console.log(i); // shows 1-9 and then stops 
+//                     //     }
+//                     // }
