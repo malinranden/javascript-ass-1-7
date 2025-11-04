@@ -1,8 +1,8 @@
+//.....Function med if/else statements (inlämning för uppgiften)
 
 let userName = prompt(`Enter username`);
 let password = prompt(`Enter password`);
 // console.log(password.length);
-
 
 function isValidPassword(userName, password) {
     if(password.length < 8) {
@@ -22,26 +22,33 @@ function isValidPassword(userName, password) {
 console.log(isValidPassword(userName, password));
 
 
-// Comparison Operators
 
-// let password = prompt(`Enter password`);
-// // password = "bajskorv";
 
-//     if (password.length >= 8) {
+//......Comparison Operators ?? kanske inte är relevant
+
+// // let password = prompt(`Enter password`);
+// let password = "bajskv";
+// let userName = "hejsa"
+
+//     if (password.length < 8) {
 //         console.log(true);
-//     } else { 
+//     } else if (password == password.includes(userName)) {
 //         console.log(false);
+//     } else { 
+//         console.log(true);
 //     };
 
 
-// Ternary ??? how ?
+//.......Ternary Statments(Y)
+// - alla statements här ska visa "true" - om dem är med i lösenordet,
+//   (false=korrekt skrivet lösenord. Eftersom vi testar om den innehåller fel.)
 
-// let password = prompt(`Enter password`);
-// // // password = "bajskorv";
+let userName = prompt(`Enter username`);
+let password = prompt(`Enter password`);
+// let password = "testlösen";
+// let userName = "hallå";
 
-// let output = password >= 8 ? true : false;
-// console.log(output);
-
-// function isValidPassword(userName, password) {
-//     return password.length < 8 ? false
-// }
+function isValidPassword(userName, password) {
+    return (password.length < 8 || password.includes(" ") || password.includes(userName)) ? true : false;
+};
+console.log(isValidPassword(userName, password));
