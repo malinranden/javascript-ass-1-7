@@ -1,15 +1,15 @@
 // //....... EXERCISE 1: Guess the random number.......//
 
-// function guessNumberGame() {
-//     const target = Math.floor(Math.random() * 10);
-//     let guess = null;
-//     while (guess !== target) {
-//         console.log(`Target: ${target}. Your guess: ${guess}`);
-//         guess = parseFloat(prompt("Make a guess"));
-//     }
-//     return target, guess; // funkar utan den här 
-// }
-// console.log((`Your guess at the number `) + guessNumberGame() + (` was correct. Congratz!`));
+function guessNumberGame() {
+    const target = Math.floor(Math.random() * 10);
+    let guess = null;
+    while (guess !== target) {
+        console.log(`Target: ${target}. Your guess: ${guess}`);
+        guess = parseFloat(prompt("Make a guess"));
+    }
+    return target, guess; // funkar utan den här 
+}
+console.log((`Your guess at the number `) + guessNumberGame() + (` was correct. Congratz!`));
 
 
 //...... EXERCISE 2: Create an array of random numbers.......//
@@ -25,16 +25,16 @@
     //
 
     // Här försöker jag få in den i function
-// let choice = prompt("Choose how many random numbers you want");
-// function generateRandomArray(choice) {
-//     const randomNumbers = [];
-//     for (let i = 0; i < choice; i++) {
-//         randomNumbers[i] = Math.floor(Math.random()*100) +1;
-//     }
-//     return randomNumbers;
-// }
-// randomNumbers = generateRandomArray(choice);
-// console.log(randomNumbers);
+let choice = prompt("Choose how many random numbers you want");
+function generateRandomArray(choice) {
+    const randomNumbers = [];
+    for (let i = 0; i < choice; i++) {
+        randomNumbers[i] = Math.floor(Math.random()*100) +1;
+    }
+    return randomNumbers;
+}
+randomNumbers = generateRandomArray(choice);
+console.log(randomNumbers);
 
 // Frågor:
 // - i uppg 3 körs function name i den sista console.log, inte här? varför? pga array=har fler values??
