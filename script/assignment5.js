@@ -6,22 +6,22 @@ const account = {
     balance: 10000,
     getBalance() {
         alert(`Your balance is ${this.balance}.`)
-        console.log(account.balance);
+        console.log(this.balance);
     },
     deposit() {
-        let deposit = prompt(`How much do you want to deposit?`);
-        balance = this.balance + parseFloat(deposit);
-        console.log(balance);
-        alert(`Your new balance is ${balance}.`);
+        let deposit = parseFloat(prompt(`How much do you want to deposit?`));
+        this.balance = this.balance + deposit;
+        console.log(this.balance);
+        alert(`Your new balance is ${this.balance}.`);
     },
     withdrawal() {
-        let withdrawal = prompt(`How much do you want to withdraw?`);
-        balance = balance - parseFloat(withdrawal); 
+        let withdrawal = parseFloat(prompt(`How much do you want to withdraw?`));
+        this.balance = this.balance - withdrawal; 
         // return withdrawal;
-        if (withdrawal > balance) {
+        if (withdrawal > this.balance) {
             alert(`You do not have enough balance on your account.`)
         } else {
-            console.log(balance);
+            console.log(this.balance);
         }
         // console.log(balance);
     },
