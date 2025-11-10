@@ -98,3 +98,115 @@ while (running) {
             alert(`Invalid choice.`);
     }
 };
+
+
+
+//////////////////////
+/// Michelles code ///
+//////////////////////
+
+let library = [
+    {
+        title: "Harry Potter",
+        author: "J.K. Rowling",
+        isRead: true
+    },
+    {
+        title: "Harry Potter 2",
+        author: "J.K. Rowling",
+        isRead: false
+    }
+];
+
+function addBook() {
+    let newBook = {};
+    newBook.title = prompt("What is the name of the book?");
+    newBook.author = prompt("Who wrote the book?");
+    let read = prompt("Have you read this book yet? Yes or No.");
+    //converts the promt to a boolean that accepts both lower and upper case answers
+    newBook.isRead = read.toLowerCase() === "yes";
+    library.push(newBook);
+
+}//end of adding new book function 
+
+function listBooks() {
+    //check if there are any books in the library array. If no books, alert there are no books
+    if (library.length === 0) {
+        alert("No books in the library. Please add a book.");
+        return;
+    }
+    //create a variable that will display the book list 
+    let bookList = "Books in the library:\n";
+    //look through the books, index them, and add the books to the bookList variable in sentence format
+    library.forEach((book, index) => {
+        bookList += `${index + 1}. ${book.title} by ${book.author} - ${book.isRead ? "Read" : "Not Read"}\n`;
+    });
+    //display the book list as an alert. It will create an aleart for each book, so you'll need to click 
+    //ok for each book to get back to the menu 
+    alert(bookList);
+};
+
+function markAsRead() {
+    let titles = [];
+    //list all unread books
+    let unRead = library.filter((library) => {
+        return library.isRead == false;
+    });
+    //put the titles into an array that can be displayed 
+    unRead.forEach((unRead) => {
+        titles.push(unRead.title);
+    });
+    //check if there are any unread books 
+    if (titles.length > 0) {
+        //promt the user to choose what book and show a list of the unread books
+        const title = prompt(`Enter the title of the book you want to mark as read. The following are unread titles: ${titles}`);
+        library.forEach((library) => {
+            //marks the book indicated by the promt as read
+            if (library.title == title) {
+                alert(`${title} has been marked as read.`);
+                return library.isRead = true;
+            } else {
+                return;
+            }
+        });
+        //if there are no unread books, alert the user of this 
+    } else {
+        alert("You have read all the books in the list. Well done!");
+        return;
+    };
+}; //end of the mark as read function 
+
+let running = true;
+
+function libraryApp() {
+    while (running) {
+        const choice = prompt(`
+            Book tracker 
+            1. Add Book 
+            2. List Books 
+            3. Mark Book as Read
+            4. Exit
+            Enter your choice`);
+
+        switch (choice) {
+            case "1":
+                addBook();
+                break;
+            case "2":
+                library.forEach(listBooks);
+                break;
+            case "3":
+                markAsRead();
+                break;
+            case "4":
+                running = false;
+                alert("Goodbye!");
+                break;
+            default:
+                alert("Invalid Chocie");
+        }
+    }
+}; //end library app function 
+
+//run the library app function 
+libraryApp();
